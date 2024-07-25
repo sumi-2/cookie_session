@@ -1,0 +1,17 @@
+<!--login.html-->
+<html>
+  <body>
+    <h1>Login</h1>
+    <form method="post">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username"><br>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password">
+      <br><br>
+      <button type="submit">Login</button>
+    </form>
+
+    <br>
+    <a href="{{ url_for('session_info') }}">세션 정보 확인</a>
+  </body>
+</html>

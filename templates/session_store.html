@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>세션 정보</title>
+</head>
+<body>
+    <h1>세션 정보</h1>
+    {% if session_data %}
+        <p>세션 ID: {{ session_data.session_id }}</p>
+        <p>사용자: {{ session_data.user }}</p>
+    {% else %}
+        <p>세션이 없습니다.</p>
+</body>
+</html>
