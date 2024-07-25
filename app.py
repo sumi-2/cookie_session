@@ -70,7 +70,7 @@ def home():
 
 
 
-# 로그아웃 처리
+# 로그아웃 시 세션 삭제 #
 @app.route('/logout')
 def logout():
     session_id = request.cookies.get("mySessionID")
@@ -87,7 +87,7 @@ def logout():
 
 
 
-# 세션 정보 확인 페이지
+# 세션 정보 확인 페이지 #
 @app.route('/session_store')
 
 def session_info():
@@ -100,7 +100,8 @@ def session_info():
         return "세션이 없습니다."
     
     # 세션 저장소에서 사용자를 가져옴
-    user = session_store[session_id]    ## 세션저장소의구조 key : session_id,##
+    user = session_store[session_id]    
+    ##   <세션 저장소의 구조> key : session_id, value : login_id(memberA)   ##
     session_data = {
         "session_id": session_id,
         "user": user
